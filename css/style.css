@@ -1,0 +1,331 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    padding: 25px 20px;
+    font-family: 'Manrope', sans-serif;
+    background-image: url(../assets/images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(230, 100%, 99%);
+}
+
+.text-color {
+    color: hsl(225, 20%, 60%);
+}
+
+/* Estilos para el "header" */
+
+.header {
+    margin-bottom: 20px;
+    text-align: center;
+    background-image: url(../assets/images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.header__title {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.header__time-paragraph {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Estilos para el "main" */
+
+.main {
+    width: 100%;
+    border-radius: 12px;
+    background-color: hsl(230, 100%, 99%);
+}
+
+.higher-container,
+.bottom-container,
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.higher-container {
+    height: 250px;
+    margin-bottom: 3px; 
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px; 
+}
+
+.form {
+    justify-content: space-around;
+    width: 100%;
+    height: inherit;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.pageviews {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.range,
+.range::-webkit-slider-runnable-track,
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 86%;
+}
+
+.range::-webkit-slider-thumb {
+    margin-top: -12px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-image: url(../assets/images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsl(174, 86%, 45%);
+}
+
+.range::-webkit-slider-thumb:hover {
+    background-color: hsl(174, 86%, 55%);
+    cursor: grab;
+}
+
+.range::-webkit-slider-thumb:active {
+    background-color: hsl(174, 86%, 30%);
+    cursor: grabbing;
+}
+
+.range::-webkit-slider-runnable-track {
+    height: 10px;
+    border-radius: 5px;
+    background-color: hsl(224, 65%, 95%);
+}
+
+.range::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url(../assets/images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsl(174, 86%, 45%);
+    cursor: grab;
+}
+
+.range::-moz-range-thumb:active {
+    cursor: grabbing;
+}
+
+.range::-ms-thumb{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px 3px hsl(174, 86%, 45%);
+    background-image: url(../assets/images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsl(174, 86%, 45%);
+}
+
+.range::-moz-range-track{
+    height: 10px;
+    border-radius: 5px;
+    background-color: hsl(224, 65%, 95%);
+}
+
+.range::-ms-track{
+    height: 10px;
+    border-radius: 5px;
+    background-color: hsl(224, 65%, 95%);
+}
+
+.price-container,
+.month-year-container {
+    display: flex;
+    align-items: center;
+}
+
+.month-year-container {
+    justify-content: space-around;
+    width: 300px;
+    padding-right: 7px;
+    font-size: .8rem;
+}
+
+.price {
+    text-align: center;
+    width: 96px;
+    height: 40px;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    border: none;
+    color: hsl(227, 35%, 25%)
+}
+
+.sign {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    color: hsl(227, 35%, 25%)
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 22px;
+    border-radius: 25px;
+    background-color: hsl(223, 50%, 87%);
+    cursor: pointer;
+}
+
+.toggle-container:hover {
+    background-color: hsl(174, 77%, 80%);
+    outline: solid 2px hsl(174, 77%, 80%);
+    transition: 1s;
+}
+
+.hidden {
+    display: none;
+}
+
+.radio {
+    appearance: none;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.radio-monthly {
+    left: 4px;
+}
+
+.radio-yearly {
+    right: 4px;
+}
+
+.discount {
+    padding: 5px 8px;
+    font-size: .7rem;
+    border-radius: 25px;
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+}
+
+.bottom-container {
+    justify-content: space-around;
+    height: 180px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0;
+    font-size: .8rem;
+    list-style-type: none;
+}
+
+.list li > img {
+    padding-right: 10px;
+}
+
+.submit {
+    width: 170px;
+    height: 40px;
+    font-size: .8rem;
+    border: none;
+    border-radius: 25px;
+    background-color: hsl(227, 35%, 25%);
+    color: hsl(226, 100%, 87%);
+    cursor: pointer;
+}
+
+/* Estilos para pantallas con un "width" mayor o igual a 1024px */
+
+@media (min-width: 1024px) {
+
+    .main {
+        width: 46%;
+    }
+
+    .higher-container {
+        height: 230px;
+    }
+
+    .form {
+        position: relative;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .pageviews {
+        position: relative;
+        align-self: flex-start;
+    }
+
+    .price-container {
+        align-self: flex-end;
+        position: absolute;
+        top: 20px;
+    }
+
+    .range,
+    .range::-webkit-slider-runnable-track {
+        width: 100%;
+    }
+
+    .month-year-container {
+        align-self: flex-end;
+        width: 350px;
+        padding-right: 10px;
+    }
+
+    .bottom-container {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 140px;
+    }
+
+    .list {
+        align-items: flex-start;
+    }
+}
+
+/* Estilos para pantallas con un "width" mayor o igual a 1440px */
+
+@media (min-width: 1440px) {
+    .main {
+        width: 40%;
+    }
+
+    .form {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}

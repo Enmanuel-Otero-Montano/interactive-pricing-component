@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style-dist.css">
+    <title>Interactive Pricing Component</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Simple, traffic-based pricing</h1>
+        <p class="header__time-paragraph text-color">Sign-up for our 30-day trial. No credit card required.</p>
+    </header>
+    <main class="main">
+        <div class="higher-container">
+            <form id="form" class="form">
+                <p class="pageviews text-color"><span class="pageviews-number text-color">100k</span> Pageviews</p>
+                <input type="range" id="range" class="range" min="4" max="28" step="4" list="value">
+                <datalist id="value">
+                    <option value="4"></option>
+                    <option value="8"></option>
+                    <option value="12"></option>
+                    <option value="16"></option>
+                    <option value="20"></option>
+                    <option value="24"></option>
+                    <option value="28"></option>
+                </datalist>
+                <div class="price-container">
+                    <p class="sign">$</p><input id="price" class="price" name="price" value="16.00" readonly><p class="text-color">/ month</p>
+                </div>
+                <div class="month-year-container">
+                    <label for="monthly" id="monthly-label" class="text-color">Monthly Billing</label>
+                    <span class="toggle-container">
+                        <input type="radio" id="monthly" class="radio radio-monthly" name="billing" value="monthly">
+                        <input type="radio" id="yearly" class="radio radio-yearly hidden" name="billing" value="yearly">
+                    </span>
+                    <label for="yearly" id="yearly-label" class="text-color">Yearly Billing</label>
+                    <p id="discount" class="discount"></p>
+                </div>
+            </form>
+        </div>
+        <div class="bottom-container">
+            <ul class="list">
+                <li class="text-color"><img src="assets/images/icon-check.svg" alt="icono que representa las prestaciones validas">Unlimited websites</li>
+                <li class="text-color"><img src="assets/images/icon-check.svg" alt="icono que representa las prestaciones validas">100% data ownership</li>
+                <li class="text-color"><img src="assets/images/icon-check.svg" alt="icono que representa las prestaciones validas">Email reports</li>
+            </ul>
+            <input type="submit" class="submit" value="Start my trial">
+        </div>
+    </main>
+    <script src="js/js.js"></script>
+</body>
+</html>
