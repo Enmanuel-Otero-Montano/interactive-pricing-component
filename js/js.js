@@ -27,7 +27,31 @@ const discountPrice = () => {
     let discount
     discount = range.value * 0.75
     price.value = discount.toFixed(2)
+    switch(range.value) {
+        case "4": 
+            pageviews.textContent = "25k"
+            break;
+        case "8": 
+            pageviews.textContent = "50k"
+            break;
+        case "12": 
+            pageviews.textContent = "75k"
+            break;
+        case "16": 
+            pageviews.textContent = "100k"
+            break;
+        case "20": 
+            pageviews.textContent = "200k"
+            break;
+        case "24": 
+            pageviews.textContent = "500k"
+            break;
+        case "28": 
+            pageviews.textContent = "900k"
+            break;
+    }
 }
+
 
 const priceValue = () => {
     switch(range.value) {
