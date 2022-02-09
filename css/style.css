@@ -318,6 +318,19 @@ body {
     .list {
         align-items: flex-start;
     }
+    
+    @media (hover: hover) {
+        .toggle-container:hover {
+            background-color: hsl(174, 77%, 80%);
+            outline: solid 2px hsl(174, 77%, 80%);
+            transition: 1s;
+        }
+
+        .range::-webkit-slider-thumb:hover {
+            background-color: hsl(174, 86%, 55%);
+            cursor: grab;
+        }
+    }
 }
 
 /* Estilos para pantallas con un "width" mayor o igual a 1440px */
